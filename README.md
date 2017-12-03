@@ -14,7 +14,7 @@ Notitia (Latin for Knowledge) is a node module. Notitia converts basic HTML base
 ## Set up
 
 ```bash
-npm install notitia converter
+npm i notitiaconverter
 ```
 
 ### Methods
