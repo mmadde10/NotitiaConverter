@@ -4,12 +4,10 @@ class HTML {
     constructor(contents){
         this.contents=contents;
     }
-    
     loadDocument(contents){
         const $ = cheerio.load(contents);
         return $;
     }
-
     getElement($){
         if($.root().length != 0){
             let root = $.root().html();

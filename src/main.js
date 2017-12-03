@@ -5,7 +5,6 @@ import * as fb from './fb/fbConverter';
 import {AMP} from './amp/ampConverter';
 
 class NotitiaConverter{
-
     //Corrects img, iframe and stlye tags, deletes dissallowed scripts, DOES NOT FIX HEAD
     createAMPDocument(contents){
         if(contents != null || contents != undefined){
