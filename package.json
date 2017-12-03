@@ -1,0 +1,35 @@
+{
+  "name": "notitiaconverter",
+  "version": "1.0.0",
+  "description": "Quick Converter of Regular HTML Article Pages into Google AMP Pages",
+  "main": "./dist/main.js",
+  "scripts": {
+    "start": "node bin/dev",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && mkdir dist && babel src -s -d dist",
+    "production": "npm run build && node bin/production",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmadde10/NotitiaConverter.git"
+  },
+  "author": "Mark Madden",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmadde10/NotitiaConverter/issues"
+  },
+  "homepage": "https://github.com/mmadde10/NotitiaConverter#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-jest": "^21.2.0",
+    "babel-preset-env": "^1.6.1",
+    "jest": "^21.2.1",
+    "regenerator-runtime": "^0.11.0",
+    "webpack": "^3.8.1"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "moment": "^2.19.2"
+  }
+}
