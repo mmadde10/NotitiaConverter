@@ -56,6 +56,9 @@ class AMP {
         $('p').each(function() {
             $(this).removeAttr('style');
         });
+        $('span').each(function() {
+            $(this).removeAttr('style');
+        });
         $('body').children('style').each(function(){
             $(this).remove();
         });

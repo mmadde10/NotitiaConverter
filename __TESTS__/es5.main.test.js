@@ -1,5 +1,6 @@
-import NotitiaConverter from '../src/main';
+var notitiaConverter = require('../dist/main');
 import * as Jest from 'jest';
+
 
 let contents = `<!doctype html>
 <html lang="en">
@@ -28,15 +29,9 @@ let contents = `<!doctype html>
 describe('Testing AMP Pages in main', () => {
    
     test('Main Project AMP Page test body', () => {
-        let Not = new NotitiaConverter(contents);
-        let ampPage = Not.createAMPBody(contents);
-        //console.log("finish\n",ampPage);
-        expect(ampPage).not.toBeNull();
-    });
-    test('Main Project AMP', () => {
-        let Not = new NotitiaConverter(contents);
-        let ampPage = Not.createAMPDocument(contents);
-        //console.log("finish\n",ampPage);
+        var Not = new notitiaConverter(contents);
+        var ampPage = Not.createAMPBody(contents);
+        console.log("finish\n",ampPage);
         expect(ampPage).not.toBeNull();
     });
 });
