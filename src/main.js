@@ -24,7 +24,7 @@ class NotitiaConverter{
             let $ = amps.getHTML(contents);
             amps.quickDelete($);
             let ampBody = amps.quickFix($,2);
-            return `<body>${ampBody}</body>`;
+            return `${ampBody}`;
         }
     }
 }
