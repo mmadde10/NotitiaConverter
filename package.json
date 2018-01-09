@@ -1,6 +1,6 @@
 {
   "name": "notitiaconverter",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "Quick Converter of Regular HTML Article Pages into Google AMP Pages",
   "main": "./dist/main.js",
   "scripts": {
