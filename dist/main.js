@@ -26,7 +26,6 @@ var NotitiaConverter = function () {
     _createClass(NotitiaConverter, [{
         key: 'createAMPDocument',
 
-
         //Corrects img, iframe and stlye tags, deletes dissallowed scripts, DOES NOT FIX HEAD
         value: function createAMPDocument(contents) {
             if (contents != null || contents != undefined) {
