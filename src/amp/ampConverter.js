@@ -51,7 +51,7 @@ class AMP {
             $(this).remove();
         });
         $('link[rel="stylesheet"]').each(function(){
-            $(this).remove()
+            $(this).remove();
         });
         $('p').each(function() {
             $(this).removeAttr('style');

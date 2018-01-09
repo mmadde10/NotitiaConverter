@@ -5,6 +5,9 @@ import * as fb from './fb/fbConverter';
 import {AMP} from './amp/ampConverter';
 
 class NotitiaConverter{
+    constructor(contents){
+        this.contents = contents;
+    }
     //Corrects img, iframe and stlye tags, deletes dissallowed scripts, DOES NOT FIX HEAD
     createAMPDocument(contents){
         if(contents != null || contents != undefined){
@@ -24,8 +27,8 @@ class NotitiaConverter{
             let $ = amps.getHTML(contents);
             amps.quickDelete($);
             let ampBody = amps.quickFix($,2);
-            return `${ampBody}`;
+            return ampBody;
         }
     }
 }
-module.exports = {NotitiaConverter};
+module.exports = NotitiaConverter;

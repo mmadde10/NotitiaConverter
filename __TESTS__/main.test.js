@@ -1,4 +1,4 @@
-import {NotitiaConverter} from '../src/main';
+import NotitiaConverter from '../src/main';
 import * as Jest from 'jest';
 
 let contents = `<!doctype html>
@@ -22,7 +22,7 @@ let contents = `<!doctype html>
     </article>
     <img src="mountains.jpg">
   </body>
-</html>`
+</html>`;
 
 
 describe('Testing AMP Pages in main', () => {
@@ -39,5 +39,4 @@ describe('Testing AMP Pages in main', () => {
         console.log("finish\n",ampPage);
         expect(ampPage).not.toBeNull();
     });
-
 });
