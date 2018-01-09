@@ -19,14 +19,16 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var NotitiaConverter = function () {
-    function NotitiaConverter() {
+    function NotitiaConverter(contents) {
         _classCallCheck(this, NotitiaConverter);
+
+        this.contents = contents;
     }
+    //Corrects img, iframe and stlye tags, deletes dissallowed scripts, DOES NOT FIX HEAD
+
 
     _createClass(NotitiaConverter, [{
         key: 'createAMPDocument',
-
-        //Corrects img, iframe and stlye tags, deletes dissallowed scripts, DOES NOT FIX HEAD
         value: function createAMPDocument(contents) {
             if (contents != null || contents != undefined) {
                 var document = new _htmlDocument.HTML(contents);
@@ -48,7 +50,7 @@ var NotitiaConverter = function () {
                 var $ = amps.getHTML(contents);
                 amps.quickDelete($);
                 var ampBody = amps.quickFix($, 2);
-                return '<body>' + ampBody + '</body>';
+                return ampBody;
             }
         }
     }]);
@@ -56,5 +58,5 @@ var NotitiaConverter = function () {
     return NotitiaConverter;
 }();
 
-module.exports = { NotitiaConverter: NotitiaConverter };
+module.exports = NotitiaConverter;
 //# sourceMappingURL=main.js.map
