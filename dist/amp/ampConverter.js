@@ -50,6 +50,10 @@ var AMP = function () {
                 var ampStyle = '<style amp-custom>' + css + '</style>';
                 $(this).replaceWith(ampStyle);
             });
+            $('#socialButtons').each(function () {
+                var ampSocialShare = '<div id="ampSocialButtons">\n                <amp-social-share id="ampFacebookLink"  width="30" height="30"  type="facebook"></amp-social-share>\n                <amp-social-share id="ampTwitterLink"  width="30" height="30"   type="twitter"></amp-social-share>\n                <amp-social-share id="ampLinkedinLink"  width="30" height="30"  type="linkedin"></amp-social-share>\n             </div>';
+                $(this).replaceWith(ampSocialShare);
+            });
             if (documentFlag == 2) {
                 return $('body').html();
             } else {
