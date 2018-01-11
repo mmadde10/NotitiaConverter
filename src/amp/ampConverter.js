@@ -33,6 +33,14 @@ class AMP {
                 let ampStyle = `<style amp-custom>${css}</style>`
                 $(this).replaceWith(ampStyle);
         });
+        $('#socialButtons').each(function(){
+            let ampSocialShare = `<div id="ampSocialButtons">
+                <amp-social-share id="ampFacebookLink"  width="30" height="30"  type="facebook"></amp-social-share>
+                <amp-social-share id="ampTwitterLink"  width="30" height="30"   type="twitter"></amp-social-share>
+                <amp-social-share id="ampLinkedinLink"  width="30" height="30"  type="linkedin"></amp-social-share>
+             </div>`;
+            $(this).replaceWith(ampSocialShare);
+        });
         if(documentFlag == 2){
             return $('body').html();
         }

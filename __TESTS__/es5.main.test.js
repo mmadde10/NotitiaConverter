@@ -19,7 +19,7 @@ let contents = `<!doctype html>
     <article>
       <h1>Article Name</h1>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas tortor sapien, non tristique ligula accumsan eu.</p>
+      <p><span style = "ont-size: small;">Lorem ipsum Lorem ipsum Lorem ipsum </span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas tortor sapien, non tristique ligula accumsan eu.</p>
     </article>
     <img src="mountains.jpg">
   </body>
@@ -31,7 +31,7 @@ describe('Testing AMP Pages in main', () => {
     test('Main Project AMP Page test body', () => {
         var Not = new notitiaConverter(contents);
         var ampPage = Not.createAMPBody(contents);
-        console.log("finish\n",ampPage);
+        //console.log("finish\n",ampPage);
         expect(ampPage).not.toBeNull();
     });
 });
