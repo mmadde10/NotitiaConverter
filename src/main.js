@@ -10,7 +10,7 @@ class NotitiaConverter{
     }
     //Corrects img, iframe and stlye tags, deletes dissallowed scripts, DOES NOT FIX HEAD
     createAMPDocument(contents){
-        if(contents != null || contents != undefined){
+        if(contents){
             const document = new HTML(contents);
             const amps = new AMP(contents);
             let $ = amps.getHTML(contents);
@@ -21,7 +21,7 @@ class NotitiaConverter{
     }
     //Corrects img, iframe and style tags, deletes dissallowed scripts, returns body only   
     createAMPBody(contents){
-        if(contents != null || contents != undefined){
+        if(contents){
             const document = new HTML(contents);
             const amps = new AMP(contents);
             let $ = amps.getHTML(contents);

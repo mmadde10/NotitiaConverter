@@ -30,7 +30,7 @@ var NotitiaConverter = function () {
     _createClass(NotitiaConverter, [{
         key: 'createAMPDocument',
         value: function createAMPDocument(contents) {
-            if (contents != null || contents != undefined) {
+            if (contents) {
                 var document = new _htmlDocument.HTML(contents);
                 var amps = new _ampConverter.AMP(contents);
                 var $ = amps.getHTML(contents);
@@ -44,7 +44,7 @@ var NotitiaConverter = function () {
     }, {
         key: 'createAMPBody',
         value: function createAMPBody(contents) {
-            if (contents != null || contents != undefined) {
+            if (contents) {
                 var document = new _htmlDocument.HTML(contents);
                 var amps = new _ampConverter.AMP(contents);
                 var $ = amps.getHTML(contents);
