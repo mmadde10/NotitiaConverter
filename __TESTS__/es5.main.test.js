@@ -31,7 +31,7 @@ describe('Testing AMP Pages in main', () => {
     test('Main Project AMP Page test body', () => {
         var Not = new notitiaConverter(contents);
         var ampPage = Not.createAMPBody(contents);
-        console.log("ES6.main.test\n",ampPage);
+        //console.log("ES5.main.test\n",ampPage);
         expect(ampPage).not.toBeNull();
     });
 });

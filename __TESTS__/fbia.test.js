@@ -1,4 +1,4 @@
-import NotitiaConverter from '../src/main';
+import FaceBookInstantArticle from '../src/fb/fbConverter';
 import * as Jest from 'jest';
 
 let contents = `<!doctype html>
@@ -30,19 +30,13 @@ let contents = `<!doctype html>
   </body>
 </html>`;
 
-
-describe('Testing AMP Pages in main', () => {
+describe('Testing Facebppl converter', () => {
    
     test('Main Project AMP Page test body', () => {
-        let Not = new NotitiaConverter(contents);
-        let ampPage = Not.createAMPBody(contents);
-        //console.log("finish\n",ampPage);
-        expect(ampPage).not.toBeNull();
-    });
-    test('Main Project AMP', () => {
-        let Not = new NotitiaConverter(contents);
-        let ampPage = Not.createAMPDocument(contents);
-        //console.log("finish\n",ampPage);
-        expect(ampPage).not.toBeNull();
+        let fbia = new FaceBookInstantArticle(contents);
+        let $ = fbia.getHTML(contents);
+        //let lang = fbia.getLanguage($);
+        //console.log("finish\n",lang);
+        expect($).not.toBeNull();
     });
 });

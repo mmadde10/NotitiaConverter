@@ -112,7 +112,17 @@ class AMP {
         */
         $('body').children('style').each(function(){
             $(this).remove();
-        });
+        });   
     }
+    /*
+    handleCSS($){
+        let css = $('style:not([amp-boilerplate])');
+        if(css.length > 1){
+            $('style:not([amp-boilerplate])').map(function(i, element) {
+                return $(this).text();
+              }).get().join(' ');   
+        }  
+    }
+    */
 }
 module.exports = {AMP};

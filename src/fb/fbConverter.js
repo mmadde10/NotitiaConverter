@@ -1,8 +1,8 @@
 'use strict';
 import * as cheerio from 'cheerio';
-import {HTML,Head} from '../html/htmlDocument';
+import {HTML} from '../html/htmlDocument';
 
-class FaceBookInstantArticle{
+class FaceBookInstantArticle {
     constructor(content){
         this.content = content;
     }
@@ -13,11 +13,10 @@ class FaceBookInstantArticle{
         return $;
     }
     prepareInstantArticle($){
-        $('body').find('img');
+        const html = new HTML();
+        let lang = html.getLanguage($);
+        return lang;
 
-    }
-    publishInstantArtcle($){
-        
     }
 }
 module.exports = FaceBookInstantArticle;
