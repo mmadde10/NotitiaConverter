@@ -1,7 +1,7 @@
 'use strict';
 import * as cheerio from 'cheerio';
 import {HTML,Head} from '../html/htmlDocument';
-
+const uncss = require("uncss");
 class AMP {
     constructor(content){
         this.content = content;
@@ -105,6 +105,19 @@ class AMP {
         $('span').each(function() {
             $(this).removeAttr('style');
         });
+        $('table').each(function() {
+            $(this).removeAttr('style');
+        });
+        $('td').each(function() {
+            $(this).removeAttr('style');
+        });
+        $('tr').each(function() {
+            $(this).removeAttr('style');
+        });
+        $('th').each(function() {
+            $(this).removeAttr('style');
+        });
+
          /* 
        
             remove CSS not in Head
@@ -114,15 +127,5 @@ class AMP {
             $(this).remove();
         });   
     }
-    /*
-    handleCSS($){
-        let css = $('style:not([amp-boilerplate])');
-        if(css.length > 1){
-            $('style:not([amp-boilerplate])').map(function(i, element) {
-                return $(this).text();
-              }).get().join(' ');   
-        }  
-    }
-    */
 }
 module.exports = {AMP};

@@ -7,7 +7,24 @@ let contents = `<!doctype html>
 
     <title>News Article</title>
 
+    <style>
+        p{
+          font-family: helvetica;
+        }
+        img{
+          width: 10;
+          height: 10;
+        }
+        h5{
+          font-family: helvetica;
+        }
+        h3{
+          font-family: helvetica;
+        }
+    </style>
+
     <link href="base.css" rel="stylesheet" />
+
 
     <script type="text/javascript" src="base.js"></script>
   </head>
@@ -36,13 +53,13 @@ describe('Testing AMP Pages in main', () => {
     test('Main Project AMP Page test body', () => {
         let Not = new NotitiaConverter(contents);
         let ampPage = Not.createAMPBody(contents);
-        //console.log("finish\n",ampPage);
+        //console.log("finish Body\n",ampPage);
         expect(ampPage).not.toBeNull();
     });
     test('Main Project AMP', () => {
         let Not = new NotitiaConverter(contents);
         let ampPage = Not.createAMPDocument(contents);
-        //console.log("finish\n",ampPage);
+        //console.log("finish HTML\n",ampPage);
         expect(ampPage).not.toBeNull();
     });
 });
