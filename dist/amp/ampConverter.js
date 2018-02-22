@@ -12,8 +12,6 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var uncss = require("uncss");
-
 var AMP = function () {
     function AMP(content) {
         _classCallCheck(this, AMP);

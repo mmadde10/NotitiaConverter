@@ -1,7 +1,6 @@
 'use strict';
 import * as cheerio from 'cheerio';
 import {HTML,Head} from '../html/htmlDocument';
-const uncss = require("uncss");
 class AMP {
     constructor(content){
         this.content = content;
