@@ -128,6 +128,9 @@ var AMP = function () {
             $('section').each(function () {
                 $(this).removeAttr('style');
             });
+            $('strong').each(function () {
+                $(this).removeAttr('style');
+            });
 
             /* 
                        remove CSS not in Head

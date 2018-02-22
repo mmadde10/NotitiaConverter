@@ -122,6 +122,9 @@ class AMP {
         $('section').each(function() {
             $(this).removeAttr('style');
         });
+        $('strong').each(function(){
+            $(this).removeAttr('style');
+        })
 
          /* 
        
