@@ -12,6 +12,8 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+var uncss = require("uncss");
+
 var AMP = function () {
     function AMP(content) {
         _classCallCheck(this, AMP);
@@ -110,11 +112,33 @@ var AMP = function () {
             $('span').each(function () {
                 $(this).removeAttr('style');
             });
+            $('table').each(function () {
+                $(this).removeAttr('style');
+            });
+            $('td').each(function () {
+                $(this).removeAttr('style');
+            });
+            $('tr').each(function () {
+                $(this).removeAttr('style');
+            });
+            $('th').each(function () {
+                $(this).removeAttr('style');
+            });
+            $('em').each(function () {
+                $(this).removeAttr('style');
+            });
+            $('section').each(function () {
+                $(this).removeAttr('style');
+            });
+
             /* 
                        remove CSS not in Head
                
             */
             $('body').children('style').each(function () {
+                $(this).remove();
+            });
+            $('font').each(function () {
                 $(this).remove();
             });
         }

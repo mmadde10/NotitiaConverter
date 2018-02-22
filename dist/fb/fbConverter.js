@@ -29,11 +29,10 @@ var FaceBookInstantArticle = function () {
     }, {
         key: 'prepareInstantArticle',
         value: function prepareInstantArticle($) {
-            $('body').find('img');
+            var html = new _htmlDocument.HTML();
+            var lang = html.getLanguage($);
+            return lang;
         }
-    }, {
-        key: 'publishInstantArtcle',
-        value: function publishInstantArtcle($) {}
     }]);
 
     return FaceBookInstantArticle;

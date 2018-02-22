@@ -117,6 +117,12 @@ class AMP {
         $('th').each(function() {
             $(this).removeAttr('style');
         });
+        $('em').each(function() {
+            $(this).removeAttr('style');
+        });
+        $('section').each(function() {
+            $(this).removeAttr('style');
+        });
 
          /* 
        
@@ -124,6 +130,9 @@ class AMP {
             
         */
         $('body').children('style').each(function(){
+            $(this).remove();
+        });
+        $('font').each(function(){
             $(this).remove();
         });   
     }
