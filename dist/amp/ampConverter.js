@@ -131,6 +131,9 @@ var AMP = function () {
             $('strong').each(function () {
                 $(this).removeAttr('style');
             });
+            $('b').each(function () {
+                $(this).removeAttr('style');
+            });
 
             /* 
                        remove CSS not in Head
@@ -141,6 +144,12 @@ var AMP = function () {
             });
             $('font').each(function () {
                 $(this).remove();
+            });
+            $('span').each(function () {
+                $(this).removeAttr('contenteditable');
+            });
+            $('ul').each(function () {
+                $(this).removeAttr('type');
             });
         }
     }]);

@@ -49,6 +49,11 @@ let contents = `<!doctype html>
 &lt;p&gt;&lt;font size=" 2"=""><em>Guaranteed Rate, Inc. is a private corporation organized under the laws of the State of Delaware. It has no affiliation with the US Department of Housing and Urban Development, the US Department of Veterans Affairs, the US Department of Agriculture or any other government agency.</em></font></p>
 <p><font size="2"><em></em></font></p>
 
+<p><b style="line-height: 1.5em;">FHA&#x2019;s Cash Down Payment</b></p>
+
+
+<ul type="disc"><li>Be careful when clicking links and opening attachments. If possible, hover your mouse over linkable text or a graphic to see the destination URL. Proceed with caution (or not at all) to avoid landing on a dangerous site or inadvertently downloading a virus.</li><li>Most of the correspondence you receive should be addressed to you specifically. If you receive an email with a generic greeting, that&#x2019;s a red flag.</li><li>Be on the lookout for misspellings and bad grammar. These can be an indicator of a fake email and at times it may even be intentional&#x2014;mistakes like this can help fraudsters avoid spam filters.</li></ul><p>If you feel you&#x2019;ve been a victim of a phishing scam or fraud as it pertains to getting a mortgage, give your loan officer a call right away to let them know. You should also report any such instance to the Federal Trade Commission (FTC.gov), which aims to protect America&#x2019;s consumers.</p>
+
 
   </body>
 </html>`;

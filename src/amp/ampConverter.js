@@ -124,7 +124,11 @@ class AMP {
         });
         $('strong').each(function(){
             $(this).removeAttr('style');
-        })
+            
+        });
+        $('b').each(function(){
+            $(this).removeAttr('style');
+        });
 
          /* 
        
@@ -136,6 +140,12 @@ class AMP {
         });
         $('font').each(function(){
             $(this).remove();
+        });
+        $('span').each(function(){
+            $(this).removeAttr('contenteditable');
+        });
+        $('ul').each(function(){
+            $(this).removeAttr('type');
         });   
     }
 }
