@@ -27,6 +27,36 @@ class AMP {
             let ampIMG = `<amp-img src = ${img.stringSRC}  width = ${img.width}  height = ${img.height} layout= ${img.layout}>  ${img.Content} </amp-img>`;
             $(this).replaceWith(ampIMG);
         });
+        /* 
+       
+            Change all videos into amp videos
+            
+        */
+
+        $('body').find('video').each(function(){
+            let video = {
+                stringSRC:String($(this).attr('src')), 
+                width: 16, 
+                height: 9, 
+                layout:"responsive",
+                content:$(this).html()
+            };
+
+            let videoSource = video.content;
+
+            let src = $(videoSource).attr('src');
+
+
+            console.log(videoSource);
+
+            let ampVideo = `<amp-video width = ${video.width}  height = ${video.height} layout= ${video.layout}>  
+                ${videoSource}
+            </amp-video>`;
+            $(this).replaceWith(ampVideo);
+        });
+
+
+
          /* 
        
             change iframe into amp iframes
