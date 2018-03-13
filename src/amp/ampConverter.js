@@ -47,8 +47,6 @@ class AMP {
             let src = $(videoSource).attr('src');
 
 
-            console.log(videoSource);
-
             let ampVideo = `<amp-video width = ${video.width}  height = ${video.height} layout= ${video.layout}>  
                 ${videoSource}
             </amp-video>`;
@@ -159,6 +157,12 @@ class AMP {
         $('b').each(function(){
             $(this).removeAttr('style');
         });
+        $('a').each(function(){
+            $(this).removeAttr('style');
+        });
+        $('h1').each(function(){
+            $(this).removeAttr('style');
+        });
 
          /* 
        
@@ -176,6 +180,9 @@ class AMP {
         });
         $('ul').each(function(){
             $(this).removeAttr('type');
+        });
+        $('tbody').each(function(){
+            $(this).removeAttr('valign');
         });   
     }
 }
