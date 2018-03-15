@@ -45,6 +45,28 @@ var AMP = function () {
                 $(this).replaceWith(ampIMG);
             });
             /* 
+                        Change all videos into amp videos
+                
+            */
+
+            $('body').find('video').each(function () {
+                var video = {
+                    stringSRC: String($(this).attr('src')),
+                    width: 16,
+                    height: 9,
+                    layout: "responsive",
+                    content: $(this).html()
+                };
+
+                var videoSource = video.content;
+
+                var src = $(videoSource).attr('src');
+
+                var ampVideo = '<amp-video width = ' + video.width + '  height = ' + video.height + ' layout= ' + video.layout + '>  \n                ' + videoSource + '\n            </amp-video>';
+                $(this).replaceWith(ampVideo);
+            });
+
+            /* 
                        change iframe into amp iframes
                
             */
@@ -134,6 +156,12 @@ var AMP = function () {
             $('b').each(function () {
                 $(this).removeAttr('style');
             });
+            $('a').each(function () {
+                $(this).removeAttr('style');
+            });
+            $('h1').each(function () {
+                $(this).removeAttr('style');
+            });
 
             /* 
                        remove CSS not in Head
@@ -150,6 +178,9 @@ var AMP = function () {
             });
             $('ul').each(function () {
                 $(this).removeAttr('type');
+            });
+            $('tbody').each(function () {
+                $(this).removeAttr('valign');
             });
         }
     }]);
